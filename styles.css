@@ -86,12 +86,12 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color:teal;
     text-decoration: none;
 }
 
 .logo span {
-    color: var(--text);
+    color: navy;
 }
 
 .nav-links {
@@ -104,7 +104,6 @@ body {
 .nav-links a {
     text-decoration: none;
     color: var(--text);
-    font-weight: 500;
 }
 
 #theme-toggle {
@@ -129,6 +128,23 @@ body {
     align-items: center;
 }
 
+/* Hero animation */
+.animated-text {
+    opacity: 0;
+    animation: heroFade 1s ease forwards;
+}
+
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-text h1 {
     font-size: 2.8rem;
 }
@@ -143,17 +159,16 @@ body {
     gap: 15px;
     flex-wrap: wrap;
 }
-.hero-image img {
-    width: 280px;              /* size */
-    height: 280px;
-    object-fit: cover;         /* image crop nicely */
-    border-radius: 50%;        /* ROUND */
-    border: 6px solid #00aaff; /* BLUE BORDER */
-    padding: 6px;              /* border gap */
-    background: #fff;          /* clean look */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
 
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--primary);
+    padding: 6px;
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 /* ===== Skills ===== */
@@ -181,18 +196,46 @@ body {
     margin-bottom: 10px;
 }
 
-/* ===== Timeline ===== */
-.timeline {
-    max-width: 700px;
-    margin: auto;
+/* ===== Education ===== */
+.education-section {
+    padding: 80px 0;
 }
 
-.timeline-item {
-    background: var(--light);
-    padding: 25px;
-    border-left: 4px solid var(--primary);
-    margin-bottom: 20px;
-    border-radius: 6px;
+.education-container {
+    max-width: 800px;
+    margin: auto;
+    border-left: 3px solid var(--primary);
+    padding-left: 25px;
+}
+
+.education-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.education-item .year {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.education-item h3 {
+    margin: 5px 0;
+}
+
+.education-item .institute {
+    font-style: italic;
+    opacity: 0.8;
 }
 
 /* ===== Projects ===== */
@@ -204,13 +247,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
-}
-
-.project-card {
-    background: var(--light);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* ===== Contact ===== */
@@ -239,9 +275,25 @@ body {
     width: 100%;
 }
 
+/* Contact Info */
 .contact-info {
-    margin-top: 20px;
+    margin-top: 25px;
     text-align: center;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.contact-info i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.contact-info a {
+    color: var(--text);
+    text-decoration: none;
 }
 
 /* ===== Footer ===== */
@@ -253,8 +305,20 @@ body {
 
 .socials a {
     margin: 0 10px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text);
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: var(--primary);
+}
+
+.socials a.youtube:hover {
+    color: #ff0000;
+}
+.socials a.youtube:hover{
+    color: #1877f2;
 }
 
 /* ===== Responsive ===== */
@@ -263,16 +327,12 @@ body {
         grid-template-columns: 1fr;
         text-align: center;
     }
-.hero-image img {
-    box-shadow:
-        0 0 0 6px #00aaff,
-        0 0 25px rgba(0,170,255,0.6);
-}
-    @media (max-width: 768px) {
+
     .hero-image img {
         width: 220px;
         height: 220px;
+        box-shadow:
+            0 0 0 6px var(--primary),
+            0 0 25px rgba(0,170,255,0.6);
     }
 }
-    }
-

@@ -19,11 +19,12 @@
 <!-- Navbar -->
 <nav class="navbar">
     <div class="container">
-        <a href="#" class="logo">D<span>S</span></a>
+        <a href="#" class="logo">D.M.D.<span>Sewwandi</span></a>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#projects">Work</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
@@ -35,25 +36,32 @@
     </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <header id="home" class="hero">
     <div class="container hero-content">
 
-        <!-- Text -->
         <div class="hero-text">
-            <h1>Hi, I am <span>Dulanjali Sewwandi</span></h1>
+            <h1 class="animated-text">
+                Hi, I am <span>Dulanjali Sewwandi</span>
+            </h1>
             <p>
                 I am a Full-Stack Developer specializing in scalable web applications
                 and intuitive user interfaces.
             </p>
 
+            <!-- Hero Buttons -->
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
                 <a href="#contact" class="btn btn-outline">Let's Talk</a>
+                <a href="assets/Dulanjali_Sewwandi_CV.pdf"
+                   class="btn btn-outline"
+                   download>
+                    <i class="fas fa-download"></i> Download CV
+                    <a href="c:\Users\BEST\Documents\Education second year\Dulanjali  cv new.pdf" target="_blank"class="cv-btn">
+                </a>
             </div>
         </div>
 
-        <!-- Profile Image -->
         <div class="hero-image">
             <img src="my pic.jpg" alt="Dulanjali Profile Photo">
         </div>
@@ -66,9 +74,8 @@
     <h2 class="section-title">About Me</h2>
     <p>
         I am a Biomedical Technology undergraduate with an interest in medical
-electronics and healthcare technology. I enjoy developing responsive websites
-using HTML, CSS, and JavaScript while continuously improving my technical skills.
-
+        electronics and healthcare technology. I enjoy developing responsive websites
+        using HTML, CSS, and JavaScript while continuously improving my technical skills.
     </p>
 </section>
 
@@ -76,9 +83,8 @@ using HTML, CSS, and JavaScript while continuously improving my technical skill
 <section id="skills" class="skills">
     <div class="container">
         <h2 class="section-title">My Skills</h2>
-
         <div class="skills-grid">
-            <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+            <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5 </span></div>
             <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
             <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
             <div class="skill-item"><i class="fab fa-php"></i><span>PHP</span></div>
@@ -87,47 +93,112 @@ using HTML, CSS, and JavaScript while continuously improving my technical skill
         </div>
     </div>
 </section>
- <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Selected Work</h2>
-            <div class="project-grid" id="project-container">
+
+<!-- Education -->
+<section id="education" class="education-section">
+    <div class="container">
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-container">
+            <div class="education-item">
+                <div class="year">2022 - Present</div>
+                <div class="content">
+                    <h3>BSc (Hons) in Biomedical Technology</h3>
+                    <p class="institute">
+                        Gampaha Wickramarachchi University of Indigenous Medicine
+                    </p>
                 </div>
-        </div>
-    </section>
+            </div>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-box">
-                <h2 class="section-title">Get In Touch</h2>
-                <p>Have a project in mind? Fill out the form below.</p>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="Project Details" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary full-width">Send Message</button>
-                </form>
+            <div class="education-item">
+                <div class="year">Certifications</div>
+                <div class="content">
+                    <h3>Web Development & Design</h3>
+                    <p>Specialized in modern web technologies and responsive design.</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Dulanjali. Build with HTML, CSS, & JS.</p>
-            <div class="socials">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
+<!-- Projects -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Selected Work</h2>
+        <div class="project-grid" id="project-container">
+            <!-- JS projects will load here -->
         </div>
+    </div>
+</section>
 
+<!-- Contact -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="contact-box">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>Have a project in mind? Fill out the form below.</p>
 
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="Project Details" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">
+                    Send Message
+                </button>
+            </form>
 
+            <!-- Contact Icons -->
+            <div class="contact-info">
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:dulanjali@email.com">
+                        dulanjalisewwandi499@email.com
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +94 755917621
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Badulla, Sri Lanka
+                </p>
+            </div>
 
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Dulanjali. Built with HTML, CSS & JS.</p>
+
+        <div class="socials">
+            <a href="https://github.com/DulanjaliSewwandi/PERSONAL-PORTFOLIO.git" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/dulanjali-sewwandi-5282b7277" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://youtube.com/@dulanjalisewwandi565?si=n11M0CO-ENtkAxu9"
+               target="_blank"
+               class="youtube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://m.facebook.com/?http_ref=eyJ0cyI6IjE3NjY4NTMxODcwMjIiLCJyIjoiaHR0cHM6XC9cL3d3dy5nb29nbGUuY29tXC8ifQ%3D%3D&cah=2&rwtsid=yfJymLPCMhYNsPCmU"
+               target="_blank"
+               class="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </div>
 </footer>
 
 <script src="script.js"></script>
