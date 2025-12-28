@@ -5,7 +5,7 @@
     --light: #ffffff;
     --bg: #f4f6f8;
     --text:var(--text);
-    --accent: #b336cc; /* Screenshot එකේ ඇති දම් පැහැය සඳහා */
+    --accent: #b336cc;
 }
 
 body.dark-mode {
@@ -127,7 +127,7 @@ body {
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
 }
 
@@ -319,7 +319,7 @@ body {
 }
 
 .project-card {
-    background: rgb(227, 227, 104);
+    background: rgb(183, 238, 182);
     border-radius: 20px;
     padding: 25px;
     width:calc(50% - 10%);
