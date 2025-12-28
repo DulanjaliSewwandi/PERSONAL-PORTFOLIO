@@ -5,6 +5,7 @@
     --light: #ffffff;
     --bg: #f4f6f8;
     --text: #333;
+    --accent: #b336cc; /* Screenshot එකේ ඇති දම් පැහැය සඳහා */
 }
 
 body.dark-mode {
@@ -86,18 +87,17 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color:var(--text);
+    color: #011111;
     text-decoration: none;
 }
 
 .logo span {
-    color:var(--primary);
+    color: navy;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    align-items: center;
     gap: 20px;
 }
 
@@ -129,11 +129,6 @@ body {
 }
 
 /* Hero animation */
-.animated-text {
-    opacity: 0;
-    animation: heroFade 1s ease forwards;
-}
-
 @keyframes heroFade {
     from {
         opacity: 0;
@@ -143,6 +138,11 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.animated-text {
+    opacity: 0;
+    animation: heroFade 1s ease forwards;
 }
 
 .hero-text h1 {
@@ -238,15 +238,52 @@ body {
     opacity: 0.8;
 }
 
-/* ===== Projects ===== */
+/* ===== Projects (New Updated Styles) ===== */
 .projects {
     padding: 80px 0;
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.project-card {
+    background: var(--light);
+    border-radius: 20px; /* දාර හොඳින් වටකුරු කිරීමට */
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* ලස්සන shadow එකක් */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Mouse එක උඩට ගිය විට උඩට එසවීමට */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px; /* Image එකේ දාර වටකුරු කිරීමට */
+    margin-bottom: 20px;
+    object-fit: cover;
+    background: #f0f0f0;
+}
+
+.project-card h3 {
+    color: var(--accent); /* Screenshot එකේ ඇති දම්/රෝස පැහැය */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
 }
 
 /* ===== Contact ===== */
@@ -269,13 +306,14 @@ body {
     margin-bottom: 15px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    background: var(--light);
+    color: var(--text);
 }
 
 .full-width {
     width: 100%;
 }
 
-/* Contact Info */
 .contact-info {
     margin-top: 25px;
     text-align: center;
@@ -317,9 +355,6 @@ body {
 .socials a.youtube:hover {
     color: #ff0000;
 }
-.socials a.youtube:hover{
-    color: #1877f2;
-}
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
@@ -334,5 +369,9 @@ body {
         box-shadow:
             0 0 0 6px var(--primary),
             0 0 25px rgba(0,170,255,0.6);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
